@@ -1,0 +1,16 @@
+{
+  "name": "mutate",
+  "version": "2.0.0",
+  "description": "high entropy, one time pad, symmetric cipher",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index encrypt -a password ./sample.jpg encrypted.jpg && node index decrypt -a password ./encrypted.jpg decrypted.jpg && node index i ./decrypted.jpg ./sample.jpg",
+    "cleanup": "del /f encrypted.jpg && del /f decrypted.jpg"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.12.2",
+    "random-seed": "^0.3.0"
+  }
+}
